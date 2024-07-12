@@ -5,9 +5,7 @@ var array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function pares(param) {
     var toReturn;
-    // Faça seu código aqui.
-    // Faça seu código aqui.
-    // Faça seu código aqui.
+    toReturn = param.filter(item  => item%2 === 0)
     return toReturn;
   }
 console.log(pares(array1));
@@ -19,9 +17,15 @@ var array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function maiorNumero(param) {
   var toReturn;
-  // Faça seu código aqui.
-  // Faça seu código aqui.
-  // Faça seu código aqui.
+  
+  var maior = param[0]
+  for (var i = 1; i < param.length; i++) {
+    if (param[i] > maior) {
+      maior = param[i]
+    }
+  }
+  toReturn = maior;
+
   return toReturn;
 }
 console.log(maiorNumero(array2));
@@ -35,20 +39,18 @@ var pessoas = [
     idade: 20,
   },
   {
-    nome: "joao",
+    nome: "jose",
     idade: 30,
   },
   {
-    nome: "joao",
+    nome: "maria",
     idade: 40,
   },
 ];
 
 function maiorIdade(param) {
   var toReturn;
-  // Faça seu código aqui.
-  // Faça seu código aqui.
-  // Faça seu código aqui.
+  toReturn = param.find(pessoa => pessoa.idade >= 40)
   return toReturn;
 }
 console.log(maiorIdade(pessoas));
@@ -72,24 +74,19 @@ var alunos = [
 ];
 
 function alunosAprovados(param) {
-  var toReturn;
-  // Faça seu código aqui.
-  // Faça seu código aqui.
-  // Faça seu código aqui.
-  return toReturn;
+  
+  return param.filter(aluno=>aluno.nota >=7).sort((a,b)=>a.nota-b.nota);
 }
 console.log(alunosAprovados(alunos));
 
 //
-// 5. Crie uma função que receba um array de numeros e retorne um array contendo apenas os números multiplicados por 5
+// 5. Crie uma função que receba um array de numeros e retorne um array com todos os numeros multiplicados por 5
 //
 var array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function multiplicaPor5(param) {
   var toReturn;
-  // Faça seu código aqui.
-  // Faça seu código aqui.
-  // Faça seu código aqui.
+  toReturn = param.map(dd => dd * 5)
   return toReturn;
 }
 console.log(multiplicaPor5(array3));
